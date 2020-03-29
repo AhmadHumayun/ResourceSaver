@@ -1,0 +1,30 @@
+{
+    "name": "Resource Saver",
+    "version": "0.0",
+    "manifest_version": 2,
+
+    "permissions": ["<all_urls>","webRequest","webRequestBlocking", "storage"],
+
+    "background": {
+        "page": "background.html"
+    },
+
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at" : "document_start"
+    }],
+
+    "description": "Extension for blocking non-critical scripts on webpages",
+
+    "browser_specific_settings": {
+        "gecko": {
+            "strict_min_version": "67.0",
+            "id": "resourcesaver@ahmad"
+        }
+    }
+}
+
+
+
+
